@@ -1,4 +1,5 @@
-let js = "amazing";
+
+/*let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 
 console.log(`Jonas`);
@@ -10,6 +11,7 @@ console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
+//variable name conventions
 let jonas_matilda = "JM";
 let $function = 27;
 
@@ -23,3 +25,24 @@ let job1 = 'programmer';
 let job2 = 'teacher';
 
 console.log(myFirstJob);
+*/
+
+let jawascriptIsFun = true;
+console.log(jawascriptIsFun);
+
+//console.log(typeof true);
+console.log(typeof jawascriptIsFun);
+//console.log(typeof 23);
+//console.log(typeof `Jonas`);
+
+jawascriptIsFun = `YES`;
+console.log(typeof jawascriptIsFun);
+
+let year;
+console.log(typeof year);
+
+year = 1991;
+console.log(typeof year);
+
+console.log(typeof null);
+
