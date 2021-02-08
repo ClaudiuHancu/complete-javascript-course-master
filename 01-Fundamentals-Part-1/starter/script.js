@@ -194,7 +194,7 @@ Test data:
 m tall.
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
 m tall.
-GOOD LUCK � 
+GOOD LUCK �
 
 The Complete JavaScript Course 6
 Coding Challenge #2
@@ -206,8 +206,8 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement �
-GOOD LUCK � 
-*/
+GOOD LUCK �
+
 
 const massMark = 78;
 const heightMark = 1.69;
@@ -224,3 +224,73 @@ if (BMIMark > BMIJohn) {
 } else {
     console.log(`John's BMI(${BMIJohn}) is higher than Mark's BMI (${BMIMark})!`);
 }
+
+
+//type conversion
+const inputYear = `1991`;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+console.log(Number(`Jonas`));
+console.log(NaN);
+console.log(typeof (NaN));
+
+console.log(String(23), 23);
+
+//type coercion
+console.log(`I'm ` + 23 + ` years old`);
+console.log(`I'm ` + String(23) + ` years old`);
+
+console.log(`23` + `10` + 3);
+console.log(`23` - `10` - 3);
+console.log(`23` / `2`)
+console.log(`23` > `18`);
+
+let n = `1` + 1; //`11
+n = n - 1;
+console.log(n);
+
+
+// 5 falsy values: 0, `` , undefined, null , NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(`Jonas`));
+console.log(Boolean({}));
+console.log(Boolean(``));
+
+const money = 100;
+if (money) {
+    console.log(`Don't spend it all ;)`);
+} else {
+    console.log(`You sould get a job`);
+}
+
+let height = 123;
+if (height) {
+    console.log(`YAY! Height is defined`)
+} else {
+    console.log(`Height is UNDEFINED`)
+}
+
+const age = `18`;
+if (age === 18) console.log(`You just become a adult :D
+    (strict) `);
+if (age == 18) console.log(`You just become a adult :D
+        (loose) `);
+
+const favorite = Number(prompt(`What's your favorite number?`));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite == 23) {
+    console.log(`Cool! 23 is a amazing number!`)
+} else if (favorite === 7) {
+    console.log(`7 is also a coool Number`)
+} else if (favorite === 3) {
+    console.log(`3 is a cool number`)
+} else {
+    console.log(`Number is not3, 23 or 7`)
+}
+
+if (favorite !== 23) console.log(`Why is not 23`);
+*/
