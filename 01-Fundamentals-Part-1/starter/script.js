@@ -429,4 +429,32 @@ true && false && !false
 if (23 > 10) {
     const str = `23 is bigger`;
 }
+
+const age = 23;
+age >= 18 ? console.log(`I like to drink wine 🍷!`) :
+    console.log(`I like to drink 💧`);
+
+const drink = age >= 18 ? `wine 🍷` : `water 💧`;
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = `wine 🍷`;
+} else {
+    drink2 = `water 💧`
+}
+console.log(drink2);
+
+console.log(`I like to drink more ${age >= 18 ? `wine 🍷` : `water 💧`}`);
+
+
+let tip;
+const bill = 275;
+bill >= 50 && bill <= 300 ? tip = bill * 0.15 :
+    tip = bill * 0.20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+${bill + tip}`);
+
 */
+
+
