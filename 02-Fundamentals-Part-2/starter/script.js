@@ -200,7 +200,7 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips);
 console.log(totals);
-
+*/
 
 const jonasArray = [
     `Jonas`,
@@ -214,5 +214,6 @@ const jonas = {
     lastName: `Schemedtmann`,
     age: 2037 - 1991,
     friends: [`Michael`, `Peter`, `Steven`]
-}
-*/
+};
+
+
