@@ -238,11 +238,208 @@ if (jonas[interestedIn]) {
 jonas.location = `Portugal`;
 
 console.log(`${jonas.firstName}  has ${jonas.friends.length}  friends and his best friend is called ${jonas.friends[0]}`);
-*/
+
+
 const jonas = {
     firstName: `Jonas`,
     lastName: `Schemedtmann`,
+    birtYear: 1991,
     age: 2037 - 1991,
     job: `teacher`,
-    friends: [`Michael`, `Peter`, `Steven`]
+    friends: [`Michael`, `Peter`, `Steven`],
+    hasDriverLicence: true,
+
+    // calcAge: function (birtYear) {
+    //     return 2037 - birtYear;
+    // }
+
+    //     calcAge: function () {
+    //         // console.log(this)
+    //         return 2037 - this.birtYear;
+    //     }
+    // };
+
+    calcAge: function () {
+        this.age = 2037 - this.birtYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job}, and he has ${this.hasDriverLicence ? `a` : `no`} driver's licence `
+    }
 };
+
+// jonas.calcAge(1991);
+
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+
+// console.log(jonas[`calcAge`](1991));
+
+// `Jonas is a 46-years old teacher, and he has a driver licence`
+
+console.log(`${jonas.firstName} is a ${jonas.age}-years old ${jonas.job}, and he has ${jonas.hasDriverLicence ? `a` : `no`} driver's licence`)
+
+console.log(jonas.getSummary());
+
+
+const mark = {
+    firstName: `Mark`,
+    lastName: `Miller`,
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    },
+};
+const john = {
+    firstName: `John`,
+    lastName: `Smith`,
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    },
+}
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})!`);
+} else {
+    console.log(`${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})!`);
+}
+
+
+// console.log(`LIfting weights repetition 1 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 2 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 3 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 4 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 5 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 6 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 7 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 8 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 9 🏋️‍♂️`);
+// console.log(`LIfting weights repetition 10 🏋️‍♂️`);
+
+
+//for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`LIfting weights repetition ${rep} 🏋️‍♂️`);
+}
+
+
+
+const jonas = [
+    `Jonas`,
+    `Schemedtmann`,
+    2037 - 1991,
+    `teacher`,
+    [`Michael`, `Peter`, `Steven`],
+    true,
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+
+    // types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log(`-------------ONLY STRINGS---------`)
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== `string`) continue;
+
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log(`-------------BREAK WITH NUMBER---------`)
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === `number`) break;
+
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
+const jonas = [
+    `Jonas`,
+    `Schemedtmann`,
+    2037 - 1991,
+    `teacher`,
+    [`Michael`, `Peter`, `Steven`],
+    true,
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`LIfting weights repetition ${rep} 🏋️‍♂️`);
+// }
+
+
+let rep = 1;
+while (rep <= 10) {
+    // console.log(`WHILE:LIfting weights repetition ${rep} 🏋️‍♂️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`Loop is about to end....`);
+}
+*/
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i];
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
