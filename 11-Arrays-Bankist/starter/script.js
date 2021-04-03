@@ -123,7 +123,7 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `${interest} €`;
 };
 
-const calcDisplayBalance = function (acc) {
+const calcDisplayBalance = acc => {
   const balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
   acc.balance = balance;
   labelBalance.textContent = `${acc.balance} €`;
